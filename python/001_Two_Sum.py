@@ -48,7 +48,9 @@ class Solution(object):
     def twoSum(self, nums, target):
         # two point
         nums_index = [(v, index) for index, v in enumerate(nums)]
+        print "list of (value, index) for %s are: \n%s" % (nums, nums_index)
         nums_index.sort()
+        print "sorted to:\n%s" % nums_index
         begin, end = 0, len(nums) - 1
         while begin < end:
             curr = nums_index[begin][0] + nums_index[end][0]
@@ -63,4 +65,4 @@ class Solution(object):
 if __name__ == '__main__':
     # begin
     s = Solution()
-    print s.twoSum([3, 2, 4], 6)
+    print s.twoSum([3, 2, 4, 5], 9)
